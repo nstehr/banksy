@@ -1,0 +1,23 @@
+rules: 
+  - 
+    type: "globRule"
+    Globs: 
+      - "*README*"
+      - "*/foo/*"
+    Label: "Foo"
+  - 
+    type: "globRule"
+    Globs: 
+      - "*/bar*"
+    Label: "Bar"
+  -
+    type: "sizeRule"
+    Compare: "greaterThan"
+    NumFiles: 2
+    NumChanges: 30
+    Label: "Large"
+  -
+    type: "sizeRule"
+    Compare: "lessThan"
+    NumChanges: 5
+    Label: "Small"
