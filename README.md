@@ -9,7 +9,7 @@ Simple application that will watch your github repos and label PRs, based on a s
 4. Set your API token in the environment variable: `GITHUB_API_TOKEN`
 5. define your rules file (more on that below).
 6. Launch banksy
-`./banksy -port <web hook server port> -baseURL <base url of github API> -rules <rules file path>
+`./banksy -port <web hook server port> -baseURL <base url of github API> -rules <rules file path>`
 `baseURL` is optional, and only used if you are using banksy with a github enterprise installation.
 Banksy will listen for web hooks on `/banksy`.  
 7. Go to the repo you would like banksy to watch and add a webook.  Don't forget to add the token you generated in step 1.
