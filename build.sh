@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 echo "Downloading goveralls"
 go get github.com/mattn/goveralls
