@@ -29,7 +29,7 @@ done
 # upload to coveralls
 $GOPATH/bin/goveralls -coverprofile=acc.out -service=travis-ci
   
-for GOOS in darwin linux windows; do
+for GOOS in darwin linux; do
   for GOARCH in 386 amd64; do
     echo "Building $GOOS-$GOARCH"
     export GOOS=$GOOS
