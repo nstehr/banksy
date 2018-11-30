@@ -8,8 +8,11 @@ script:
 - "./build.sh"
 deploy:
   provider: releases
+  skip_cleanup: true
   api_key:
     secure: jRA12Q45CD2VL5SOXcSKSPYUxtGIROBE+ILzAuTnjrdQZKzUJfV9MQqVF2TVD63x5QosrtoNIv4asTsWdGwjc8t8H/614AvoTYkqWOMH+6ApVJC3y0pITMB2AsNV5HFE4hBY8+awEY9krAmN3tudwb/bSfYgieYLAR78vYSEe1OaHrYyQgCoRdDndY0DkGqUQV3IBJrgNwWTFTtQsCBFnpWsEUVr+WxzqBnRV6TKx32gaQVk8TN5hKXlpPdxBnkqhFMaN4BKVqZfmDsGSVPy17o1fdvITaQduE2QH1qr/OdAp9hpxgffinKD+90dfYZAbORv8kZlhSfTXZHk3h4FXYV2m/sfpBLguocNoqpKtGC5HXo174STcmbdwSdQSN+mH4yfw72PfZ4C1j3LDP1u0uSKZtH12FVABUR8FwNphuoRJ67yuCMKhKgjmDGD/PWTmhASYOn6apvSFAUz6v9/NHw7GJBzb4KrOYjl58Uwykyu6YJwwKHkhaBtyXxLW6QkunoV828vwIM6sgw6GK9jp+eOKmervohKKowggmqR4ZXBRqH3NUct5hw4JqOY5Gj2mfUesies4jE6eTj5SUS6wKHZp5WPlu3jgc++d8PLYdk3WiHPowd29n+7xLymVy35NM7yfvvmqy5vzPU8fF6VBgxhVhUUaUJcadKyay1Oh90=
+  file_glob: true
   file: bin/banksy-*
   on:
     repo: nstehr/banksy
+    tags: true 
