@@ -24,14 +24,14 @@ type Labeller struct {
 }
 
 // NewLabeller will instantiate a new Labeller
-func NewLabeller(data []byte) *Labeller {
+func NewLabeller(data []byte) (*Labeller, error) {
 	var ruleSet RuleEntrySet
 	err := yaml.Unmarshal([]byte(data), &ruleSet)
 	if err != nil {
-		log.Println("error parsing yaml:", err)
+		return nil, err
 	}
 	rules := buildRules(ruleSet.Entries)
-	return &Labeller{rules: rules}
+	return &Labeller{rules: rules}, nil
 }
 
 func buildRules(entries []RuleEntry) []Rule {

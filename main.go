@@ -36,7 +36,10 @@ func main() {
 	if err != nil {
 		log.Fatal("Error reading rules yaml file", err)
 	}
-	l := banksy.NewLabeller(yamlFile)
+	l, err := banksy.NewLabeller(yamlFile)
+	if err != nil {
+		log.Fatal("Error parsing rules yaml file", err)
+	}
 	apiToken := os.Getenv("GITHUB_API_TOKEN")
 	if apiToken == "" {
 		log.Fatal("Must specify Github API token using GITHUB_API_TOKEN")
