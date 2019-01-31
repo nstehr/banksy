@@ -1,4 +1,9 @@
 # banksy
+
+[![Build Status](https://travis-ci.org/nstehr/banksy.svg?branch=master)](https://travis-ci.org/nstehr/banksy) [![Coverage Status](https://coveralls.io/repos/github/nstehr/banksy/badge.svg?branch=master)](https://coveralls.io/github/nstehr/banksy?branch=master) [![Go Report Card](https://goreportcard.com/badge/github.com/nstehr/banksy)](https://goreportcard.com/report/github.com/nstehr/banksy)
+
+
+
 Simple application that will watch your github repos and label PRs, based on a simple rules file.
 
 ## Usage
